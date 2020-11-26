@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import About from "../components/pages/About";
 
-const Main = () => {
+const Main = (props) => {
   return (
     <div>
       <MainStyle>
         <Container>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Dignissimos, quisquam alias quae facere delectus vel distinctio
-            dolor dolore repellat aspernatur iste laboriosam molestias, quasi
-            temporibus, voluptatem voluptate velit odit ducimus?
+            {props.mainText} <br />
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi at
+            ducimus veritatis iusto repellendus? Harum autem totam animi
+            suscipit accusamus.
           </p>
         </Container>
       </MainStyle>
@@ -21,11 +22,14 @@ const Main = () => {
 export default Main;
 
 const MainStyle = styled.main`
-  background-color: #ddd;
+  background-color: #efefef;
   height: 80vh;
   display: flex;
   align-items: center;
   margin: 0 auto;
+  /* .main-text-title {
+    font-weight: bold;
+  } */
   & p {
     display: flex;
     align-items: center;
