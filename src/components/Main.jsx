@@ -27,9 +27,6 @@ const MainStyle = styled.main`
   display: flex;
   align-items: center;
   margin: 0 auto;
-  /* .main-text-title {
-    font-weight: bold;
-  } */
   & p {
     display: flex;
     align-items: center;

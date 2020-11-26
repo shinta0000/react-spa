@@ -1,16 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div>
       <HeaderStyle>
         <h1>header</h1>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
+        <UlStyle>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+        </UlStyle>
       </HeaderStyle>
     </div>
   );
@@ -24,11 +31,17 @@ const HeaderStyle = styled.header`
   color: white;
   align-items: center;
   justify-content: space-around;
-  & ul {
-    list-style: none;
-    display: flex;
-    & li {
-      padding-left: 20px;
+`;
+
+const UlStyle = styled.ul`
+  list-style: none;
+  display: flex;
+  & li {
+    padding-left: 20px;
+    & a {
+      color: white;
+      list-style: none;
+      text-decoration: none;
     }
   }
 `;
