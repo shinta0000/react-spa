@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import About from "../components/pages/About";
+import "../App.css";
 
 const Main = (props) => {
   return (
     <div>
-      <MainStyle>
+      <MainStyle className="target">
         <Container>
           <p>
             {props.mainText} <br />
@@ -23,13 +24,17 @@ export default Main;
 
 const MainStyle = styled.main`
   background-color: #efefef;
-  height: 80vh;
+  height: 600px;
   display: flex;
   align-items: center;
   margin: 0 auto;
+  min-height: 500px;
+  width: 100%;
+  background-position: bottom;
   & p {
     display: flex;
     align-items: center;
+    color: white;
   }
 `;
 
