@@ -15,9 +15,9 @@ const Form = () => {
   const classes = useStyles();
 
   return (
-    <>
+    <FormStyle>
       <TitleStyle>お問い合わせ</TitleStyle>
-      <FormStyle>
+      <ContactFormStyle>
         <label htmlFor="">
           メールアドレス
           <input type="email" name="email" />
@@ -31,19 +31,23 @@ const Form = () => {
             <Button variant="outlined">送信</Button>
           </div>
         </div>
-      </FormStyle>
-    </>
+      </ContactFormStyle>
+    </FormStyle>
   );
 };
 
 export default Form;
+
+const FormStyle = styled.div`
+  height: 78vh;
+`;
 
 const TitleStyle = styled.h2`
   margin-top: 30px;
   text-align: center;
 `;
 
-const FormStyle = styled.form`
+const ContactFormStyle = styled.form`
   width: 500px;
   height: 400px;
   border: 1px solid #333;
