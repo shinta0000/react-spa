@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <div>
       <HeaderStyle>
-        <h1>header</h1>
+        <h1>
+          <Link to="/">Header</Link>
+        </h1>
         <UlStyle>
           <li>
             <Link to="/">Home</Link>
@@ -31,6 +33,12 @@ const HeaderStyle = styled.header`
   color: white;
   align-items: center;
   justify-content: space-around;
+
+  & a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+  }
 `;
 
 const UlStyle = styled.ul`
