@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div>
       <Header />
-      <Main mainText="about text" />
+      <Main mainText="About Page" />
       <Cards />
       <Footer />
     </div>
