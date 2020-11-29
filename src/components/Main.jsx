@@ -8,8 +8,8 @@ const Main = (props) => {
     <div>
       <MainStyle className="target">
         <Container>
+          <h1>{props.mainText}</h1>
           <p>
-            {props.mainText} <br />
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi at
             ducimus veritatis iusto repellendus? Harum autem totam animi
             suscipit accusamus.
@@ -30,11 +30,11 @@ const MainStyle = styled.main`
   margin: 0 auto;
   min-height: 500px;
   width: 100%;
+  color: white;
   background-position: bottom;
-  & p {
-    display: flex;
-    align-items: center;
-    color: white;
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
   }
 `;
 
