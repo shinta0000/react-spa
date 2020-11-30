@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import InstagramIcon from "@material-ui/icons/Instagram";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -9,6 +12,11 @@ const Footer = () => {
         <h2>
           <Link>React SPA</Link>
         </h2>
+        <IconStyle>
+          <TwitterIcon className="icon" />
+          <GitHubIcon className="icon" />
+          <InstagramIcon className="icon" />
+        </IconStyle>
         <UlStyle>
           <li>
             <Link>Home</Link>
@@ -63,5 +71,11 @@ const UlStyle = styled.ul`
         box-shadow: 10px 5px 5px #aaa;
       }
     }
+  }
+`;
+
+const IconStyle = styled.div`
+  .icon {
+    margin: 0 10px;
   }
 `;
