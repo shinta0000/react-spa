@@ -1,8 +1,13 @@
-.target {
+.home {
   background-image: url(./components/assets/sky-5114501_1920.jpg);
   background-size: cover;
   min-height: 500px;
   width: 100%;
-  /* background-repeat: no-repeat;
-  overflow: hidden; */
+}
+
+.about {
+  background-image: url(./components/assets/night_0111.jpg);
+  background-size: cover;
+  min-height: 500px;
+  width: 100%;
 }
