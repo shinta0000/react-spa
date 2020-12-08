@@ -5,7 +5,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [toggleIcon, setToggleIcon] = useState(true);
+  const [toggleIcon, setToggleIcon] = useState(false);
 
   const closeMobileMenu = () => setToggleIcon(false);
   const handleMenu = () => {
@@ -37,7 +37,7 @@ const Header = () => {
           </UlStyle>
           <ToggleIcon>
             <Link onClick={handleMenu}>
-              {toggleIcon ? <MenuIcon /> : <CloseIcon />}
+              {toggleIcon ? <CloseIcon /> : <MenuIcon />}
             </Link>
           </ToggleIcon>
           {toggleIcon ? (
@@ -151,36 +151,3 @@ const AsideMenu = styled.div`
     display: none;
   }
 `;
-
-// const AsideMenu = styled.div`
-//   .disactive {
-//     display: none;
-//   }
-//   .active {
-//     position: absolute;
-//     top: 0px;
-//     left: 0px;
-//     width: 100%;
-//     height: 100%;
-//     background-color: #555;
-//     list-style: none;
-//     z-index: 999;
-//     & ul {
-//       height: 100%;
-//       font-size: 28px;
-//       padding: 0;
-//       margin: 0 auto;
-
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: space-around;
-//       align-items: center;
-//     }
-//     & li {
-//       display: flex;
-//     }
-//     @media screen and (min-width: 520px) {
-//       display: none;
-//     }
-//   }
-// `;
