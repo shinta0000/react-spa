@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [toggleIcon, setToggleIcon] = useState(true);
 
+  const closeMobileMenu = () => setToggleIcon(false);
   const handleMenu = () => {
     if (toggleIcon) {
       setToggleIcon(false);
@@ -39,14 +40,28 @@ const Header = () => {
               {toggleIcon ? <MenuIcon /> : <CloseIcon />}
             </Link>
           </ToggleIcon>
-          <AsideMenu>
-            {/* <i>icon</i> */}
-            <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Contact</li>
-            </ul>
-          </AsideMenu>
+          {toggleIcon ? (
+            <AsideMenu>
+              <CloseIcon onClick={closeMobileMenu} />
+              <ul>
+                <li>
+                  <Link onClick={closeMobileMenu} to="/">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={closeMobileMenu} to="/about">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={closeMobileMenu} to="/contact">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </AsideMenu>
+          ) : null}
         </HeaderStyle>
       </div>
     </>
@@ -136,3 +151,36 @@ const AsideMenu = styled.div`
     display: none;
   }
 `;
+
+// const AsideMenu = styled.div`
+//   .disactive {
+//     display: none;
+//   }
+//   .active {
+//     position: absolute;
+//     top: 0px;
+//     left: 0px;
+//     width: 100%;
+//     height: 100%;
+//     background-color: #555;
+//     list-style: none;
+//     z-index: 999;
+//     & ul {
+//       height: 100%;
+//       font-size: 28px;
+//       padding: 0;
+//       margin: 0 auto;
+
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: space-around;
+//       align-items: center;
+//     }
+//     & li {
+//       display: flex;
+//     }
+//     @media screen and (min-width: 520px) {
+//       display: none;
+//     }
+//   }
+// `;
