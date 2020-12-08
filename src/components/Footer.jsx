@@ -19,13 +19,13 @@ const Footer = () => {
         </IconStyle>
         <UlStyle>
           <li>
-            <Link>Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link>About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link>Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </UlStyle>
       </div>
