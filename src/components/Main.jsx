@@ -10,13 +10,9 @@ const Main = (props) => {
         <Container>
           <h1>{props.mainText}</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis, cumque, deserunt labore iusto hic odio eligendi
-            mollitia soluta dignissimos ex nemo aliquam excepturi autem
-            quibusdam voluptate? Neque minus numquam aut libero sunt laboriosam
-            sed, error consequuntur commodi quae deleniti repudiandae nisi
-            reiciendis eos suscipit? Sint quam magnam earum reiciendis
-            explicabo?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi at
+            ducimus veritatis iusto repellendus? Harum autem totam animi
+            suscipit accusamus.
           </p>
         </Container>
       </MainStyle>
@@ -27,9 +23,7 @@ const Main = (props) => {
 export default Main;
 
 const MainStyle = styled.main`
-  text-align: center;
   background-color: #efefef;
-  line-height: 24px;
   height: 600px;
   display: flex;
   align-items: center;
