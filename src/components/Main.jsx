@@ -6,7 +6,7 @@ import "../App.css";
 const Main = (props) => {
   return (
     <div>
-      <MainStyle className="target">
+      <MainStyle className={props.check === "about" ? "about" : "home"}>
         <Container>
           <h1>{props.mainText}</h1>
           <p>
